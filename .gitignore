@@ -1,0 +1,24 @@
+# Java build output
+bin/
+
+# VS Code settings
+.vscode/
+
+# Dependency libraries
+lib/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# IDE files
+*.iml
+.idea/
+
+# Other
+*.class
+*.jar
+*.md
