@@ -1,6 +1,6 @@
-package Entities;
+package entities;
 
-import Components.Components;
+import components.Components;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -10,15 +10,21 @@ public class EntityManager {
     private final Map<Integer, Entity> entities = new ConcurrentHashMap<>();
     private final AtomicInteger entity_id = new AtomicInteger(0);
 
-    public int createEntity(Entity entity) {
+    public Entity createEntity() {
+        Entity new_entity = new Entity();
         int id = entity_id.getAndIncrement();
-        entities.put(id, entity);
-        return id;
+        entities.put(id, new_entity);
+        return new_entity;
     }
 
     public void destroyEntity(int entity_id){
         entities.remove(entity_id);
     }
+
+    public Map<Integer, Entity> getEntities(){
+        return entities;
+    }
+    
 
     public <T extends Components> void addComponent(int entity_id, T component){
         Entity entity = entities.get(entity_id);

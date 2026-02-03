@@ -1,6 +1,6 @@
-package Entities;
+package entities;
 
-import Components.Components;
+import components.Components;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 

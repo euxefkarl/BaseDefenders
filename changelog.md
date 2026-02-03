@@ -12,13 +12,17 @@
     - .gitignore
     - README.md
 
+## 1.0.1 — Initial Engine
+- Trial and error for ECS Engine
+    - Entity creation via Entity Manager seems fine for now
+    - Rendering system needs fixing
+- Relearning Java Graphics Libraries
+- Renamed src folders to appropriate Java convention
+- Reusing old project sprite for testing purposes
+
+
+
 ### Known issues / limitations
-- No game loop, input handling, rendering pipeline, or concrete components/systems implemented yet.
+- No game loop, input handling, or concrete components/systems implemented yet.
 - No tests or build scripts included.
 - Entities currently use runtime-type mapping for components — consider component IDs or bitmasks for performant queries later.
-
-### Next steps
-- Implement core components (Transform, Renderable, Health, AI, etc.).
-- Add game loop (fixed-step), rendering pipeline, and input management.
-- Design system scheduler and entity query mechanism (bitmask / archetypes).
-- Add unit/integration tests and basic asset pipeline.

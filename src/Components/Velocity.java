@@ -1,4 +1,4 @@
-package Components;
+package components;
 
 public class Velocity extends Components{
     public int vx, vy;

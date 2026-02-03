@@ -1,4 +1,4 @@
-package Components;
+package components;
 
 public class Damage extends Components{
     public int dmg;
