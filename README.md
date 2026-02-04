@@ -14,3 +14,29 @@ This project is primarily a **learning-focused** and **architecture-driven** gam
 - ECS design patterns
 - Rendering and game loops in pure Java
 - Decoupled systems and data-oriented design
+
+## 🧱 Tech Stack
+
+- **Language:** Java (vanilla, no game engine)
+- **Rendering:** Java AWT/Swing / BufferStrategy (or your actual setup)
+- **Architecture:** Entity–Component–System (ECS)
+- **Build:** (e.g., javac / IDE / Gradle / Maven — update as needed)
+
+## 🧠 Architecture: ECS
+
+The game uses an **Entity–Component–System** architecture:
+
+- **Entities**
+  - Unique IDs or lightweight objects
+  - Represent game objects (enemies, towers, bullets, base, etc.)
+- **Components**
+  - Pure data holders (e.g., Position, Velocity, Health, Renderable)
+  - No logic inside components
+- **Systems**
+  - Contain all logic
+  - Operate on entities that match specific component sets
+  - Examples:
+    - MovementSystem
+    - RenderSystem
+    - CombatSystem
+    - SpawnSystem

@@ -20,9 +20,15 @@
 - Renamed src folders to appropriate Java convention
 - Reusing old project sprite for testing purposes
 
+## 1.0.2 — Initial Engine
+- Trial and error for ECS Engine
+    - Entity creation via Entity Manager seems fine for now
+    - Rendering system fixed
+- Component API buggy, getting component (BufferedImage) returns null
 
 
 ### Known issues / limitations
 - No game loop, input handling, or concrete components/systems implemented yet.
+- Component API, specifically Sprite is not working properly
 - No tests or build scripts included.
 - Entities currently use runtime-type mapping for components — consider component IDs or bitmasks for performant queries later.
