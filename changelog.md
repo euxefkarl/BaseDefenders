@@ -26,6 +26,13 @@
     - Rendering system fixed
 - Component API buggy, getting component (BufferedImage) returns null
 
+## 1.0.3 — Initial Engine
+- Deleted most of the systems and initial gamepanel
+- - the architectural structure i chose is too complicated 
+- - will rebuild from scratch
+- Debugged entity creation, for now Position is working
+
+
 
 ### Known issues / limitations
 - No game loop, input handling, or concrete components/systems implemented yet.
