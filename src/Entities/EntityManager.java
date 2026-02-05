@@ -25,11 +25,30 @@ public class EntityManager {
         return entities;
     }
     
+    public int getEntityId(Entity entity){
+        for(Map.Entry<Integer, Entity> entry : entities.entrySet()){
+            if(entry.getValue().equals(entity)){
+                return entry.getKey();
+            }
+        }
+        throw new IllegalArgumentException("Entity not found in EntityManager.");
+    }
+    
 
     public <T extends Components> void addComponent(int entity_id, T component){
         Entity entity = entities.get(entity_id);
         if(entity != null){
             entity.addComponent(component);
+        }
+        else{
+            throw new IllegalArgumentException("Entity with ID " + entity_id + " does not exist.");
+        }
+    }
+
+    public <T extends Components> T getComponent(int entity_id, Class<T> componentClass){
+        Entity entity = entities.get(entity_id);
+        if(entity != null){
+            return entity.getComponent(componentClass);
         }
         else{
             throw new IllegalArgumentException("Entity with ID " + entity_id + " does not exist.");

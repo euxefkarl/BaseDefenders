@@ -26,6 +26,9 @@ public class Sprite extends Components {
     public BufferedImage getSprite() {
         return sprite;
     }
+    public boolean isLoaded() {
+        return sprite != null;
+    }
 
     
 
