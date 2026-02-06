@@ -31,11 +31,15 @@
 - - the architectural structure i chose is too complicated 
 - - will rebuild from scratch
 - Debugged entity creation, for now Position is working
+## 1.0.4 - Initial Engine 
+- From now own I will work on 1 aspect of the game at a time
+- Sprite Component now properly loads sprites
+- - Scaling test is not yet possible due to lack of rendering system
+- Next on the chopping block will be the rendering system rebuilt
 
 
 
 ### Known issues / limitations
 - No game loop, input handling, or concrete components/systems implemented yet.
-- Component API, specifically Sprite is not working properly
 - No tests or build scripts included.
 - Entities currently use runtime-type mapping for components — consider component IDs or bitmasks for performant queries later.
